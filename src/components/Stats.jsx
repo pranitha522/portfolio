@@ -78,14 +78,7 @@ function Stats() {
 
               <h2 className="text-5xl font-black">
 
-                {inView && (
-
-                  <CountUp
-                    end={item.number}
-                    duration={2}
-                  />
-
-                )}
+                {item.number}
 
                 {item.suffix}
 
