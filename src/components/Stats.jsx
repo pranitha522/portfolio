@@ -12,7 +12,7 @@ import {
 const stats = [
   {
     icon: <FaBriefcase />,
-    number: 3,
+    number: 4,
     suffix: "+",
     title: "Professional Experience",
   },
