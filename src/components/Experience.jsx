@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import {
-  FaBriefcase,
   FaChartLine,
   FaDatabase,
   FaLaptopCode,
@@ -8,44 +7,45 @@ import {
 
 const experiences = [
   {
-    year: "Jun 2025 - Present",
+    year: "Jun 2025 - Apr 2026",
     role: "Data Analyst (Volunteer)",
     company: "Community Dreams Foundation",
     icon: <FaChartLine />,
     color: "text-cyan-400",
     points: [
-      "Developed interactive dashboards using Power BI and Tableau.",
-      "Performed data analysis using SQL and Python.",
-      "Automated reporting processes to improve efficiency.",
-      "Generated business insights through KPI reporting and visualization.",
+      "Performed data cleansing and quality assurance across reporting systems.",
+      "Analyzed 20,000+ records using SQL and Python to identify business trends.",
+      "Built interactive Power BI and Tableau dashboards for stakeholder reporting.",
+      "Collaborated with cross-functional teams to deliver actionable business insights.",
     ],
   },
 
   {
-    year: "Jun 2022 - Jun 2023",
+    year: "Jul 2021 - Jun 2023",
     role: "Data Analyst",
-    company: "Develop Trees",
+    company: "Armo Techsolutions Pvt Ltd",
     icon: <FaDatabase />,
     color: "text-green-400",
     points: [
-      "Analyzed business data using SQL and Python.",
-      "Built dashboards for executive reporting.",
-      "Performed data cleaning and validation.",
-      "Collaborated with business teams to identify KPIs.",
+      "Developed interactive Power BI and Tableau dashboards for business reporting.",
+      "Wrote optimized SQL queries to analyze datasets of over 50,000 records.",
+      "Automated reporting workflows using Python, improving reporting efficiency.",
+      "Performed trend analysis and KPI reporting to support business decisions.",
+      "Collaborated with cross-functional teams to deliver analytics solutions.",
     ],
   },
 
   {
-    year: "Jan 2022 - Jun 2022",
-    role: "Software Developer Intern",
-    company: "WorksBot",
+    year: "Jul 2020 - Jul 2021",
+    role: "Data Analyst Intern",
+    company: "Armo Techsolutions Pvt Ltd",
     icon: <FaLaptopCode />,
     color: "text-yellow-400",
     points: [
-      "Developed Academic Management System using Django.",
-      "Designed MongoDB database collections.",
-      "Implemented role-based authentication.",
-      "Participated in testing and deployment.",
+      "Assisted in data collection, cleaning, and transformation for analytics projects.",
+      "Wrote SQL queries to extract and validate data for reporting needs.",
+      "Supported maintenance of relational databases and ETL workflows.",
+      "Built foundational Power BI dashboards to monitor operational metrics.",
     ],
   },
 ];
@@ -61,34 +61,28 @@ function Experience() {
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: .7 }}
+          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="text-center mb-24"
         >
 
           <h2 className="text-5xl md:text-6xl font-black tracking-tight">
-
             Professional
-
             <span className="text-cyan-400">
               {" "}Experience
             </span>
-
           </h2>
 
           <p className="text-slate-400 mt-6 text-lg max-w-3xl mx-auto">
-
             My professional journey in Data Analytics,
-            Business Intelligence, and Software Development.
-
+            Business Intelligence, and Data-Driven Decision Making.
           </p>
 
         </motion.div>
 
         <div className="relative">
 
-          {/* Vertical Line */}
-
+          {/* Vertical Timeline Line */}
           <div className="absolute left-7 top-0 bottom-0 w-1 bg-cyan-500/30"></div>
 
           <div className="space-y-14">
@@ -100,26 +94,25 @@ function Experience() {
                 initial={{ opacity: 0, x: -60 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{
-                  duration: .6,
-                  delay: index * .2,
+                  duration: 0.6,
+                  delay: index * 0.2,
                 }}
                 viewport={{ once: true }}
                 className="flex gap-8 items-start"
               >
 
-                {/* Timeline Circle */}
-
+                {/* Timeline Icon */}
                 <div className="relative z-10">
 
-                  <div className={`w-14 h-14 rounded-full bg-slate-900 border-4 border-cyan-400 flex items-center justify-center text-2xl ${job.color}`}>
-
+                  <div
+                    className={`w-14 h-14 rounded-full bg-slate-900 border-4 border-cyan-400 flex items-center justify-center text-2xl ${job.color}`}
+                  >
                     {job.icon}
-
                   </div>
 
                 </div>
 
-                {/* Card */}
+                {/* Experience Card */}
 
                 <motion.div
                   whileHover={{
@@ -130,21 +123,15 @@ function Experience() {
                 >
 
                   <p className="text-cyan-400 font-semibold mb-2">
-
                     {job.year}
-
                   </p>
 
                   <h3 className="text-3xl font-bold">
-
                     {job.role}
-
                   </h3>
 
                   <p className="text-slate-400 text-xl mb-6">
-
                     {job.company}
-
                   </p>
 
                   <ul className="space-y-3">
@@ -157,9 +144,7 @@ function Experience() {
                       >
 
                         <span className="text-cyan-400 mt-1">
-
                           ●
-
                         </span>
 
                         {point}
